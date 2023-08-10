@@ -1,5 +1,5 @@
 ## rclone-snap
-[![rclone](https://snapcraft.io/onedrive-cli/badge.svg)](https://snapcraft.io/rclone)
+[![rclone](https://snapcraft.io/rclone/badge.svg)](https://snapcraft.io/rclone)
 
 [Rclone Project Link](https://github.com/rclone/rclone) 
 
