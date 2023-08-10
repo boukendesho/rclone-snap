@@ -11,7 +11,9 @@ description: |
   Due to the strict permissions control of Snap, some features may not work.
 
 architectures:
-  - build-on: amd64
+  - amd64
+  - arm64
+  - armhf
 
 grade: stable
 confinement: strict
