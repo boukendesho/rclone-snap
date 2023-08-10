@@ -1,0 +1,47 @@
+name: rclone 
+base: core22
+adopt-info: rclone
+summary: rsync for cloud storage
+description: |
+  Rclone ("rsync for cloud storage") is a command-line program to sync files and directories to and from different cloud storage providers.
+
+
+  Please note that this is a community-maintained package. Use at your own risk.
+  
+  Due to the strict permissions control of Snap, some features may not work.
+
+architectures:
+  - build-on: amd64
+
+grade: stable
+confinement: strict
+
+apps:
+  rclone:
+    command: bin/rclone
+    plugs:
+      - home
+      - network
+      - network-bind
+      
+parts:
+  rclone:
+    plugin: go
+    build-snaps:
+      - go
+    source-type: git
+    source: https://github.com/rclone/rclone
+    source-tag: 'v1.63.1'
+    source-depth: 1
+    override-pull: |
+      craftctl default
+      craftctl set version=$(git describe --tags --abbrev=0 | tr -d 'v')
+    build-environment:
+      - CGO_ENABLED: 0
+    override-build: |
+      mkdir -p $CRAFT_PART_INSTALL/bin
+      cd $CRAFT_PART_SRC
+      make
+      cp $(go env GOPATH)/bin/rclone $CRAFT_PART_INSTALL/bin/
+    
+    
