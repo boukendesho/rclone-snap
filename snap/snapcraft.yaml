@@ -25,6 +25,7 @@ apps:
       - home
       - network
       - network-bind
+      - fuse-support
       
 parts:
   rclone:

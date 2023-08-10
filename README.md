@@ -33,4 +33,8 @@ see: [Official Docs](https://rclone.org/docs/)
 Due to the packaging with Snap, the default paths are different.
 
 - Default config directory: /home/$Your_User_Name/snap/rclone/current/.config/rclone
+- Mountpoint can only exist in snap-specific writable directories:
+    - SNAP_USER_{DATA,COMMON}: /home/$USER/snap/rclone/{common,current}
+    - SNAP_{DATA,COMMON}: /var/snap/rclone/{common,current}
+
 
