@@ -25,7 +25,6 @@ apps:
       - home
       - network
       - network-bind
-      - fuse-support
       - removable-media
       
 parts:
@@ -42,6 +41,7 @@ parts:
       craftctl set version=$(git describe --tags --abbrev=0 | tr -d 'v')
     build-environment:
       - CGO_ENABLED: 0
+      - GOTAGS: snap
     override-build: |
       mkdir -p $CRAFT_PART_INSTALL/bin
       cd $CRAFT_PART_SRC
