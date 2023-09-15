@@ -7,7 +7,7 @@ description: |
 
 
   Please note that this is a community-maintained package. Use at your own risk.
-  
+
   Due to the strict permissions control of Snap, some features may not work.
 
 architectures:
@@ -26,7 +26,7 @@ apps:
       - network
       - network-bind
       - removable-media
-      
+
 parts:
   rclone:
     plugin: go
@@ -34,7 +34,7 @@ parts:
       - go
     source-type: git
     source: https://github.com/rclone/rclone
-    source-tag: 'v1.63.1'
+    source-tag: 'v1.64.0'
     source-depth: 1
     override-pull: |
       craftctl default
@@ -47,5 +47,3 @@ parts:
       cd $CRAFT_PART_SRC
       make
       cp $(go env GOPATH)/bin/rclone $CRAFT_PART_INSTALL/bin/
-    
-    
