@@ -21,6 +21,7 @@ confinement: strict
 apps:
   rclone:
     command: bin/rclone
+    completer: bin/rclone-completion.bash
     plugs:
       - home
       - network
@@ -28,6 +29,12 @@ apps:
       - removable-media
 
 parts:
+  completion:
+    plugin: dump
+    source: .
+    organize:
+      rclone-completion.bash: bin/rclone-completion.bash
+
   rclone:
     plugin: go
     build-snaps:
