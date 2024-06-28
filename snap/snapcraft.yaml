@@ -29,12 +29,6 @@ apps:
       - removable-media
 
 parts:
-  completion:
-    plugin: dump
-    source: .
-    organize:
-      rclone-completion.bash: bin/rclone-completion.bash
-
   rclone:
     plugin: go
     build-snaps:
