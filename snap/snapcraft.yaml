@@ -54,3 +54,5 @@ parts:
       cd $CRAFT_PART_SRC
       make
       cp $(go env GOPATH)/bin/rclone $CRAFT_PART_INSTALL/bin/
+      # generate bash completion
+      $CRAFT_PART_INSTALL/bin/rclone completion bash $CRAFT_PART_INSTALL/bin/rclone-completion.bash
