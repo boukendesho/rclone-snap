@@ -1,5 +1,5 @@
 name: rclone 
-base: core22
+base: core24
 adopt-info: rclone
 summary: rsync for cloud storage
 description: |
@@ -10,10 +10,10 @@ description: |
 
   Due to the strict permissions control of Snap, some features may not work.
 
-architectures:
-  - build-on: amd64
-  - build-on: arm64
-  - build-on: armhf
+platforms:
+  amd64:
+  # arm64:
+  # armhf:
 
 grade: stable
 confinement: strict
