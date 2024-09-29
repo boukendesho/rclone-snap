@@ -12,8 +12,8 @@ description: |
 
 platforms:
   amd64:
-  # arm64:
-  # armhf:
+  arm64:
+  armhf:
 
 grade: stable
 confinement: strict
