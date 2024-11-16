@@ -35,7 +35,7 @@ parts:
       - go
     source-type: git
     source: https://github.com/rclone/rclone
-    source-tag: 'v1.68.1'
+    source-tag: 'v1.68.2'
     source-depth: 1
     override-pull: |
       craftctl default
