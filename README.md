@@ -1,7 +1,8 @@
 ## rclone-snap
 [![rclone](https://snapcraft.io/rclone/badge.svg)](https://snapcraft.io/rclone)
 
-[Rclone Project Link](https://github.com/rclone/rclone) 
+## Upstream
+[![rclone](https://img.shields.io/github/v/release/rclone/rclone?logo=github)](https://github.com/rclone/rclone)
 
 Rclone ("rsync for cloud storage") is a command-line program to sync files and directories to and from different cloud storage providers.
   
